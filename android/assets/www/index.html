@@ -1,0 +1,38 @@
+<!doctype html>
+<head>
+  <title>WordCheck</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="result-pane">
+    <p>
+      <span id="word">FOOBAR</span> is
+      <span id="result">GOOD</span>
+    </p>
+    <p id="definition">This is a def</p>
+  </div>
+  <form id="lookup-form">
+    <fieldset>
+      <input type="text" placeholder="Enter a word" pattern="[a-zA-Z]*" id="lookup-word" autofocus="autofocus" required="required"/>
+    </fieldset>
+  </form>
+  <script src="js/closure/closure/goog/base.js"></script>
+  <script src="js/wordcheck/deps.js"></script>
+  <script>
+    goog.require("wordcheck.Start");
+  </script>
+  <!--<script src="js/wordcheck/wordcheck-compiled.js"></script>-->
+  <script>
+    wordcheck.Start();
+  </script>
+  <script src="js/owl2.js"></script>
+  <script>
+  	window.KeyBoard.showKeyBoard();
+  </script>
+</body>
+</html>
