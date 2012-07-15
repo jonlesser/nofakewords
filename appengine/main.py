@@ -4,20 +4,21 @@ import os
 import webapp2
 
 from datetime import datetime, timedelta
-from owl2 import word_list, word_dict
+from owl2 import word_set
+from owl2lists import letter_lists
 
 templates = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 class MainHandler(webapp2.RequestHandler):
   def get(self):
-    template = templates.get_template('index.html')
+    template = templates.get_template('main.html')
     self.response.out.write(template.render())
 
 
 class ApiCheckHandler(webapp2.RequestHandler):
   def get(self, word):
-    resp = (word in word_dict)
+    resp = (word in word_set)
     self.response.content_type = 'application/json'
     self.response.cache_control.no_cache = None
     self.response.cache_control.public = True
@@ -28,7 +29,7 @@ class ApiCheckHandler(webapp2.RequestHandler):
 
 class ApiListHandler(webapp2.RequestHandler):
   def get(self, letter):
-    resp = word_list[letter]
+    resp = list(letter_lists[letter])
     self.response.content_type = 'application/json'
     self.response.cache_control.no_cache = None
     self.response.cache_control.public = True
