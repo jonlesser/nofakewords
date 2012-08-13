@@ -6,14 +6,14 @@ echo "Timestamp will be: $DATE"
 mkdir compiled/$DATE
 
 # Compile JS.
-#js/closure-library/closure/bin/build/closurebuilder.py \
-#  --root=js/ \
-#  --namespace="nfw.CheckForm" \
-#  --output_mode=compiled \
-#  --compiler_jar=js/closure-compiler/compiler.jar \
-#  --compiler_flags="--compilation_level=ADVANCED_OPTIMIZATIONS" \
-#  --compiler_flags="--generate_exports" \
-#  --output_file=compiled/$DATE/main.js
+js/closure-library/closure/bin/build/closurebuilder.py \
+  --root=js/ \
+  --namespace="nfw.CheckForm" \
+  --output_mode=compiled \
+  --compiler_jar=js/closure-compiler/compiler.jar \
+  --compiler_flags="--compilation_level=ADVANCED_OPTIMIZATIONS" \
+  --compiler_flags="--generate_exports" \
+  --output_file=compiled/$DATE/main.js
 
 # Compress Css.
 echo "Compressing CSS..."
