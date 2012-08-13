@@ -816,4 +816,4 @@ goog.addDependency('../../../closure-library/third_party/closure/goog/osapi/osap
 goog.addDependency('../../../closure-library/third_party/closure/goog/silverlight/clipboardbutton.js', ['goog.silverlight.ClipboardButton', 'goog.silverlight.ClipboardButtonType', 'goog.silverlight.ClipboardEvent', 'goog.silverlight.CopyButton', 'goog.silverlight.PasteButton', 'goog.silverlight.PasteButtonEvent'], ['goog.asserts', 'goog.events.Event', 'goog.math.Size', 'goog.silverlight', 'goog.ui.Component']);
 goog.addDependency('../../../closure-library/third_party/closure/goog/silverlight/silverlight.js', ['goog.silverlight'], []);
 goog.addDependency('../../../closure-library/third_party/closure/goog/silverlight/supporteduseragent.js', ['goog.silverlight.supportedUserAgent'], []);
-goog.addDependency('../../../main.js', ['nfw.CheckForm'], ['goog.dom', 'goog.ui.Component']);
+goog.addDependency('../../../main.js', ['nfw.CheckForm'], ['goog.dom', 'goog.net.XhrIo', 'goog.string', 'goog.ui.Component']);
