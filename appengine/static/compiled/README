@@ -1,0 +1,2 @@
+The version_and_compile.sh script will generate a new bundle of static files
+in this directory and update the app version and references to static files.
