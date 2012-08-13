@@ -8,6 +8,11 @@
       _gaq.push(['_setAccount', 'UA-33388730-1']);
       _gaq.push(['_trackPageview']);
     </script>
+    {% if dev %}
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="/static/css/compiled/main-2012-08-13-03-18-22.css" />
+    {% endif %}
   </head>
   <body>
     <form action="#" method="post" id="checkform">
@@ -15,7 +20,13 @@
       <button type="submit" id="submit">Check it</button>
     </form>
     <script type="text/javascript">
-      (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
+      (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
     </script>
     {% if dev %}
     <script src="/static/js/closure-library/closure/goog/base.js"></script>
@@ -24,7 +35,7 @@
       goog.require('nfw.CheckForm');
     </script>
     {% else %}
-    <script src="/static/js/compiled/main-compiled.js"></script>
+    <script src="/static/js/compiled/main-2012-08-13-03-18-22.js"></script>
     {% endif %}
     <script>
       var form = new nfw.CheckForm();
