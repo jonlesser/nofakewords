@@ -13,7 +13,9 @@ templates = jinja2.Environment(
 class MainHandler(webapp2.RequestHandler):
   def get(self):
     template = templates.get_template('main.html')
-    self.response.out.write(template.render())
+    self.response.out.write(template.render({
+      'dev': os.environ["SERVER_SOFTWARE"].startswith('Development'),
+    }))
 
 
 class ApiCheckHandler(webapp2.RequestHandler):

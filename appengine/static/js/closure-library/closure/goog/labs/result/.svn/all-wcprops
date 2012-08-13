@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2094/trunk/closure/goog/labs/result
+END
+simpleresult.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2093/trunk/closure/goog/labs/result/simpleresult.js
+END
+chain_test.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2093/trunk/closure/goog/labs/result/chain_test.html
+END
+wait_test.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2093/trunk/closure/goog/labs/result/wait_test.html
+END
+deferredadaptor.js
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2094/trunk/closure/goog/labs/result/deferredadaptor.js
+END
+resultutil.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2093/trunk/closure/goog/labs/result/resultutil.js
+END
+result_interface.js
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2093/trunk/closure/goog/labs/result/result_interface.js
+END
+simpleresult_test.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2093/trunk/closure/goog/labs/result/simpleresult_test.html
+END
+deferredadaptor_test.html
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/2094/trunk/closure/goog/labs/result/deferredadaptor_test.html
+END
+transform_test.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2093/trunk/closure/goog/labs/result/transform_test.html
+END
+combine_test.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2093/trunk/closure/goog/labs/result/combine_test.html
+END
