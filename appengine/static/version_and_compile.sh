@@ -23,5 +23,5 @@ java -jar css/closure-stylesheets.jar \
 
 # Update the css and js links and the app version.
 echo "Updating files..."
-sed -E -i '' "s|compiled/[0-9]{14}|compiled/$DATE|" ../main.html
-sed -E -i '' "s|[0-9]{14}|$DATE|" ../app.yaml
+sed -E -i '' "s|compiled/[0-9]{14}/|compiled/$DATE/|" ../main.html
+sed -E -i '' "s|^version:[ ][0-9]{14}$|version: $DATE|" ../app.yaml
