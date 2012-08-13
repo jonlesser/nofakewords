@@ -1,9 +1,9 @@
 application: nofakewords
-version: 1
+version: 88888888888888
 runtime: python27
-api_version: 20120813035209
+api_version: 1
 threadsafe: yes
-default_expiration: "3650d"
+default_expiration: "3600d"
 
 handlers:
 - url: /favicon\.ico
