@@ -13,6 +13,7 @@ templates = jinja2.Environment(
 class MainHandler(webapp2.RequestHandler):
   def get(self):
     template = templates.get_template('main.html')
+    self.response.headers.add('X-UA-Compatible', 'IE=edge')
     self.response.out.write(template.render({
       'dev': os.environ["SERVER_SOFTWARE"].startswith('Development'),
     }))

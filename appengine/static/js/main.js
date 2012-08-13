@@ -39,6 +39,12 @@ nfw.CheckForm = function(opt_domHelper) {
    * @private
    */
   this.resultEl_ = null;
+
+  /**
+   * @type {Date}
+   * @private
+   */
+  this.startTime_ = new Date();
 };
 goog.inherits(nfw.CheckForm, goog.ui.Component);
 
@@ -90,13 +96,28 @@ nfw.CheckForm.prototype.submitHandler_ = function(e) {
  */
 nfw.CheckForm.prototype.renderCheckResponse_ = function(e) {
   var valid = e ? !!e.target.getResponseJson() : false;
-  console.log(valid);
-  var text = goog.string.htmlEscape(this.input_.value) + ' is not a word.';
+  var value = this.input_.value;
+
+  // Sets the content of the result element.
+  var text = goog.string.htmlEscape(value) + ' is not a word.';
   if (valid) {
-    text = goog.string.htmlEscape(this.input_.value) + ' is a word!';
+    text = goog.string.htmlEscape(value) + ' is a word!';
   }
   this.resultEl_.innerHTML = text;
+
+  // Selects input content to make it faster to enter another word.
   this.input_.select();
+
+  // Tracks event in analytics.
+  if (goog.global._gaq) {
+    goog.global._gaq.push([
+      '_trackEvent',
+      'Word Lookup',
+      escape(value),
+      'method=remote&valid=' + valid,
+      new Date() - this.startTime_
+    ]);
+  }
 };
 
 

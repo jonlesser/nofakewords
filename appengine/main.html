@@ -1,18 +1,20 @@
 <!doctype html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google-site-verification" content="-fiwflsVVz2NbQd3YeJuoCNXEn-97tRUVWg3lsgpSbs">
     <title>No Fake Words</title>
-    <meta name="google-site-verification" content="-fiwflsVVz2NbQd3YeJuoCNXEn-97tRUVWg3lsgpSbs" />
+    {% if dev %}
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="/static/compiled/20120813075025/main.css" />
+    {% endif %}
     <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-33388730-1']);
       _gaq.push(['_trackPageview']);
     </script>
-    {% if dev %}
-    <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
-    {% else %}
-    <link rel="stylesheet" type="text/css" href="/static/css/compiled/20120813064957/main.css" />
-    {% endif %}
   </head>
   <body>
     <form action="#" method="post" id="checkform">
@@ -21,7 +23,7 @@
       <a href="http://en.wikipedia.org/wiki/Official_Tournament_and_Club_Word_List">
         TWL</a>.
       </p>
-      <input type="input" id="input" />
+      <input type="text" id="input">
       <button type="submit" id="submit">Check it</button>
       <p id="result"></p>
     </form>
@@ -32,7 +34,7 @@
       goog.require('nfw.CheckForm');
     </script>
     {% else %}
-    <script src="/static/js/compiled/20120813064957/main.js"></script>
+    <script src="/static/compiled/20120813075025/main.js"></script>
     {% endif %}
     <script>
       var form = new nfw.CheckForm();
