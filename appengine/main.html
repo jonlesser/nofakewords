@@ -10,6 +10,7 @@
     {% else %}
     <link rel="stylesheet" type="text/css" href="/static/compiled/20120813075318/main.css" />
     {% endif %}
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:400' rel='stylesheet' type='text/css'>
     <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-33388730-1']);
@@ -17,16 +18,16 @@
     </script>
   </head>
   <body>
-    <form action="#" method="post" id="checkform">
-      <h1>No Fake Words</h1>
-      <p>Check words against the
+    <h1>No Fake Words</h1>
+    <p>Check words against the 
       <a href="http://en.wikipedia.org/wiki/Official_Tournament_and_Club_Word_List">
-        TWL</a>.
-      </p>
+        TWL</a>
+    </p>
+    <form action="#" method="post" id="checkform">
       <input type="text" id="input">
       <button type="submit" id="submit">Check it</button>
-      <p id="result"></p>
     </form>
+    <p id="result"></p>
     {% if dev %}
     <script src="/static/js/closure-library/closure/goog/base.js"></script>
     <script src="/static/js/deps.js"></script>
