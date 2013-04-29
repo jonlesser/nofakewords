@@ -1,1 +1,58 @@
-form {}
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+a:hover {
+	color: gray;
+}
+
+form {
+	width: 200px;
+	margin: auto;
+}
+
+form button {
+	background-color: white;
+	border: 2px solid black;
+}
+
+
+form button:hover {
+	background-color: #aaa;
+	color: white;
+}
+
+form button:active {
+	background-color: #eee;
+	color: white;
+
+}
+
+#result {
+	margin-top: 10px;
+	font-size: 1.5em;
+}
+
+h1, p {
+	font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	margin-top: 15%;
+	font-size: 3em;
+	font-weight: 400;
+}
+
+p {
+	margin-bottom: 50px;
+}
+
+@media all and (max-width: 450px) {
+	h1 {
+		font-size: 2.5em;
+	}
+}
