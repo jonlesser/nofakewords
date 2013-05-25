@@ -1,5 +1,5 @@
 application: nofakewords
-version: 20130525083611
+version: 20130525084151
 runtime: python27
 api_version: 1
 threadsafe: yes
@@ -12,7 +12,7 @@ handlers:
 
 - url: /static/(.*)
   static_files: static/\1
-  upload: static/compiled/20130525083611/(.*)
+  upload: static/compiled/20130525084151/(.*)
 
 - url: .*
   script: main.app

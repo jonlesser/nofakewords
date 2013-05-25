@@ -6,7 +6,7 @@ echo "Timestamp will be: $DATE"
 mkdir compiled/$DATE
 
 # Compile JS.
-js/closure-library/closure/bin/build/closurebuilder.py \
+python js/closure-library/closure/bin/build/closurebuilder.py \
   --root=js/ \
   --namespace="nfw.CheckForm" \
   --output_mode=compiled \
