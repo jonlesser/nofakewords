@@ -109,8 +109,8 @@ nfw.CheckForm.prototype.renderCheckResponse_ = function(e) {
   this.input_.select();
 
   // Tracks event in analytics.
-  if (goog.global._gaq) {
-    goog.global._gaq.push([
+  if (goog.global['_gaq']) {
+    goog.global['_gaq'].push([
       '_trackEvent',
       'Word Lookup',
       escape(value),
